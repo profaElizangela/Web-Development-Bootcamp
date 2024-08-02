@@ -1,0 +1,28 @@
+/* Write your code here: */
+
+/* group */
+h1, h2{
+    color: blueviolet;
+}
+
+/* parent > child 
+   child : Apply to direct child of left side*/
+.box > p {
+    color: firebrick;
+}
+
+/* Descendant */
+.box li{
+    color: blue;
+}
+
+/* Chaining 
+   Apply where All selectors are true */
+li.done{
+    color: green;
+}
+
+/* Combining Combiners */
+ul p.done{
+    font-size: 0.5rem;
+}
