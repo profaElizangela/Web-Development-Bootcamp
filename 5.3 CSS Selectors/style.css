@@ -5,6 +5,9 @@ ol {
 }
 
 /* Write your CSS below, don't change the rules above. */
+h2[draggable]{
+  color: blueviolet;
+}
 
 p{
   color: red;
