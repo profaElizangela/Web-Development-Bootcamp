@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Will It Rain Tomorrow?</h1>
+        <form action="/" method="post">
+            <input type="text" name="city" placeholder="Enter city name" required>
+            <input type="submit" value="Check Weather">
+        </form>
+
+        <div class="result">
+
+            <% if (weather) { %>
+                <h2>Weather for <%= weather.city %> </h2>
+                <p>Temperature: <%= weather.temp %> °C</p>
+                <p>Humidity: <%= weather.humidity %> %</p>
+                <p>Weather: <%= weather.description %></p>
+
+                <% if (weather.rainChance) { %>
+                    <p class="rain-warning"> It might rain tomorrow! Don't forget your umbrella ☔️</p>
+                <% } else { %>
+                    <p> No rain expected tomorrow! Enjoy your day 😊</p>
+                <% } %>
+
+            <% } %>
+        </div>
+    </div>
+
+</body>
+</html>
